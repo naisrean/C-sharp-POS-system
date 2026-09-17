@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("C#_POS_System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b229fa0f9b92fcbafa6e9de5c2c242c77187e1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("C#_POS_System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("C#_POS_System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

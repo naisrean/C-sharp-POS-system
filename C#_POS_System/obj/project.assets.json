@@ -2,6 +2,33 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "Guna.UI2.WinForms/2.0.4.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows7.0/Guna.UI2.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows7.0/Guna.UI2.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "MaterialSkin.2/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows7.0/MaterialSkin.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/MaterialSkin.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "Microsoft.Bcl.Cryptography/8.0.0": {
         "type": "package",
         "compile": {
@@ -361,6 +388,22 @@
           }
         }
       },
+      "System.CodeDom/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "System.Configuration.ConfigurationManager/8.0.1": {
         "type": "package",
         "dependencies": {
@@ -424,6 +467,31 @@
           }
         }
       },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Management.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.Pkcs/8.0.1": {
         "type": "package",
         "compile": {
@@ -465,6 +533,45 @@
     }
   },
   "libraries": {
+    "Guna.UI2.WinForms/2.0.4.8": {
+      "sha512": "fIY3+UIuuxGAPQACC+DRrRS3kkcrdaKGWvjrWoa5AVkjfXjQci34EYr2iMlWchvmzptEiGKE3sqZYmnBvj9JVw==",
+      "type": "package",
+      "path": "guna.ui2.winforms/2.0.4.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "guna.ui2.winforms.2.0.4.8.nupkg.sha512",
+        "guna.ui2.winforms.nuspec",
+        "icon.png",
+        "lib/net40/Guna.UI2.dll",
+        "lib/net45/Guna.UI2.dll",
+        "lib/net461/Guna.UI2.dll",
+        "lib/net472/Guna.UI2.dll",
+        "lib/net48/Guna.UI2.dll",
+        "lib/net6.0-windows7.0/Guna.UI2.dll",
+        "lib/net7.0-windows7.0/Guna.UI2.dll",
+        "lib/netcoreapp3.1/Guna.UI2.dll"
+      ]
+    },
+    "MaterialSkin.2/2.3.1": {
+      "sha512": "w2vFxLNk4InCDU7pXDfBqPfv55HhBtuu8HRfEqQpeS3sNTS1pUzDs/hS0b5JW2/tKvt+P1of9OINP8a9omWDBg==",
+      "type": "package",
+      "path": "materialskin.2/2.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net45/MaterialSkin.dll",
+        "lib/net461/MaterialSkin.dll",
+        "lib/net48/MaterialSkin.dll",
+        "lib/net5.0-windows7.0/MaterialSkin.dll",
+        "materialskin.2.2.3.1.nupkg.sha512",
+        "materialskin.2.nuspec",
+        "nugetIcon.png"
+      ]
+    },
     "Microsoft.Bcl.Cryptography/8.0.0": {
       "sha512": "Y3t/c7C5XHJGFDnohjf1/9SYF3ZOfEU1fkNQuKg/dGf9hN18yrQj2owHITGfNS3+lKJdW6J4vY98jYu57jCO8A==",
       "type": "package",
@@ -1026,6 +1133,33 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
+    "System.CodeDom/7.0.0": {
+      "sha512": "GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "type": "package",
+      "path": "system.codedom/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.CodeDom.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.CodeDom.targets",
+        "lib/net462/System.CodeDom.dll",
+        "lib/net462/System.CodeDom.xml",
+        "lib/net6.0/System.CodeDom.dll",
+        "lib/net6.0/System.CodeDom.xml",
+        "lib/net7.0/System.CodeDom.dll",
+        "lib/net7.0/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.7.0.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Configuration.ConfigurationManager/8.0.1": {
       "sha512": "gPYFPDyohW2gXNhdQRSjtmeS6FymL2crg4Sral1wtvEJ7DUqFCDWDVbbLobASbzxfic8U1hQEdC7hmg9LHncMw==",
       "type": "package",
@@ -1121,6 +1255,34 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
+    "System.Management/7.0.0": {
+      "sha512": "A4jed4QUviDOm7fJNKAJObEAEkEUXmkGL/w0iyCYTzrl1rezTj8LGFHfsVst4Vb9JwFcTpboiDrvdST48avBpw==",
+      "type": "package",
+      "path": "system.management/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Management.targets",
+        "lib/net462/_._",
+        "lib/net6.0/System.Management.dll",
+        "lib/net6.0/System.Management.xml",
+        "lib/net7.0/System.Management.dll",
+        "lib/net7.0/System.Management.xml",
+        "lib/netstandard2.0/System.Management.dll",
+        "lib/netstandard2.0/System.Management.xml",
+        "runtimes/win/lib/net6.0/System.Management.dll",
+        "runtimes/win/lib/net6.0/System.Management.xml",
+        "runtimes/win/lib/net7.0/System.Management.dll",
+        "runtimes/win/lib/net7.0/System.Management.xml",
+        "system.management.7.0.0.nupkg.sha512",
+        "system.management.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Security.Cryptography.Pkcs/8.0.1": {
       "sha512": "CoCRHFym33aUSf/NtWSVSZa99dkd0Hm7OCZUxORBjRB16LNhIEOf8THPqzIYlvKM0nNDAPTRBa1FxEECrgaxxA==",
       "type": "package",
@@ -1197,6 +1359,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "Guna.UI2.WinForms >= 2.0.4.8",
+      "MaterialSkin.2 >= 2.3.1",
       "Microsoft.Data.SqlClient >= 7.0.3"
     ]
   },
@@ -1250,6 +1414,14 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "Guna.UI2.WinForms": {
+            "target": "Package",
+            "version": "[2.0.4.8, )"
+          },
+          "MaterialSkin.2": {
+            "target": "Package",
+            "version": "[2.3.1, )"
+          },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[7.0.3, )"
