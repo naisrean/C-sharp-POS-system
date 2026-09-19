@@ -62,3 +62,7 @@ D:\Y4 SLS\C# Project\C#_POS_System\C#_POS_System\bin\Debug\net8.0-windows\Guna.U
 D:\Y4 SLS\C# Project\C#_POS_System\C#_POS_System\bin\Debug\net8.0-windows\MaterialSkin.dll
 D:\Y4 SLS\C# Project\C#_POS_System\C#_POS_System\bin\Debug\net8.0-windows\System.Management.dll
 D:\Y4 SLS\C# Project\C#_POS_System\C#_POS_System\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+D:\Y4 SLS\C# Project\C#_POS_System\C#_POS_System\obj\Debug\net8.0-windows\C__POS_System.Forms.FormCreate.resources
+D:\Y4 SLS\C# Project\C#_POS_System\C#_POS_System\obj\Debug\net8.0-windows\C__POS_System.Properties.Resources.resources
+D:\Y4 SLS\C# Project\C#_POS_System\C#_POS_System\obj\Debug\net8.0-windows\C__POS_System.Forms.ShowProducts.resources
+D:\Y4 SLS\C# Project\C#_POS_System\C#_POS_System\obj\Debug\net8.0-windows\C__POS_System.Forms.ShowOrders.resources
