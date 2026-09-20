@@ -41,7 +41,17 @@ namespace C__POS_System.Services
 
         public int DeleteProduct(int id)
         {
-            string query = "DELETE FROM Products WHERE Id = @Id";
+            string query = "UPDATE Products SET IsActive = 0 WHERE Id = @Id";
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@Id", id)
+            };
+            return Db.ExecuteNonQuery(query, parameters);
+        }
+
+        public int RestoreProduct(int id)
+        {
+            string query = "UPDATE Products SET IsActive = 1 WHERE Id = @Id";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@Id", id)
@@ -51,56 +61,38 @@ namespace C__POS_System.Services
 
         public List<Product> GetAllProducts()
         {
-            string query = "SELECT p.Id, p.Name, p.Price, p.CategoryID, c.Name AS CategoryName, p.Image FROM Products p INNER JOIN Categories c ON p.CategoryID = c.Id";
-            DataTable dt = Db.ExecuteQuery(query);
-            List<Product> products = new List<Product>();
-            foreach (DataRow row in dt.Rows)
-            {
-                products.Add(new Product
-                {
-                    Id = Convert.ToInt32(row["Id"]),
-                    Name = row["Name"].ToString(),
-                    Price = Convert.ToDecimal(row["Price"]),
-                    CategoryID = Convert.ToInt32(row["CategoryID"]),
-                    CategoryName = row["CategoryName"].ToString(),
-                    Imaage = row["Image"] != DBNull.Value ? row["Image"].ToString() : string.Empty
-                });
-            }
-            return products;
+            string query = "SELECT p.Id, p.Name, p.Price, p.CategoryID, c.Name AS CategoryName, p.Image, p.IsActive FROM Products p INNER JOIN Categories c ON p.CategoryID = c.Id";
+            return MapProducts(Db.ExecuteQuery(query));
+        }
+
+        public List<Product> GetAllActiveProducts()
+        {
+            string query = "SELECT p.Id, p.Name, p.Price, p.CategoryID, c.Name AS CategoryName, p.Image, p.IsActive FROM Products p INNER JOIN Categories c ON p.CategoryID = c.Id WHERE p.IsActive = 1";
+            return MapProducts(Db.ExecuteQuery(query));
         }
 
         public List<Product> SearchProducts(string keyword)
         {
-            string query = "SELECT p.Id, p.Name, p.Price, p.CategoryID, c.Name AS CategoryName, p.Image FROM Products p INNER JOIN Categories c ON p.CategoryID = c.Id WHERE p.Name LIKE @Keyword";
+            string query = "SELECT p.Id, p.Name, p.Price, p.CategoryID, c.Name AS CategoryName, p.Image, p.IsActive FROM Products p INNER JOIN Categories c ON p.CategoryID = c.Id WHERE p.IsActive = 1 AND p.Name LIKE @Keyword";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@Keyword", "%" + keyword + "%")
             };
-            DataTable dt = Db.ExecuteQuery(query, parameters);
-            List<Product> products = new List<Product>();
-            foreach (DataRow row in dt.Rows)
-            {
-                products.Add(new Product
-                {
-                    Id = Convert.ToInt32(row["Id"]),
-                    Name = row["Name"].ToString(),
-                    Price = Convert.ToDecimal(row["Price"]),
-                    CategoryID = Convert.ToInt32(row["CategoryID"]),
-                    CategoryName = row["CategoryName"].ToString(),
-                    Imaage = row["Image"] != DBNull.Value ? row["Image"].ToString() : string.Empty
-                });
-            }
-            return products;
+            return MapProducts(Db.ExecuteQuery(query, parameters));
         }
 
         public List<Product> GetProductsByCategory(int categoryId)
         {
-            string query = "SELECT p.Id, p.Name, p.Price, p.CategoryID, c.Name AS CategoryName, p.Image FROM Products p INNER JOIN Categories c ON p.CategoryID = c.Id WHERE p.CategoryID = @CategoryID";
+            string query = "SELECT p.Id, p.Name, p.Price, p.CategoryID, c.Name AS CategoryName, p.Image, p.IsActive FROM Products p INNER JOIN Categories c ON p.CategoryID = c.Id WHERE p.IsActive = 1 AND p.CategoryID = @CategoryID";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@CategoryID", categoryId)
             };
-            DataTable dt = Db.ExecuteQuery(query, parameters);
+            return MapProducts(Db.ExecuteQuery(query, parameters));
+        }
+
+        private List<Product> MapProducts(DataTable dt)
+        {
             List<Product> products = new List<Product>();
             foreach (DataRow row in dt.Rows)
             {
@@ -111,7 +103,8 @@ namespace C__POS_System.Services
                     Price = Convert.ToDecimal(row["Price"]),
                     CategoryID = Convert.ToInt32(row["CategoryID"]),
                     CategoryName = row["CategoryName"].ToString(),
-                    Imaage = row["Image"] != DBNull.Value ? row["Image"].ToString() : string.Empty
+                    Imaage = row["Image"] != DBNull.Value ? row["Image"].ToString() : string.Empty,
+                    IsActive = row["IsActive"] != DBNull.Value && Convert.ToBoolean(row["IsActive"])
                 });
             }
             return products;

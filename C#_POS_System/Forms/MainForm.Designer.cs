@@ -101,7 +101,7 @@
             flowLayoutPanel2.Location = new Point(0, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(18, 0, 10, 0);
-            flowLayoutPanel2.Size = new Size(894, 61);
+            flowLayoutPanel2.Size = new Size(894, 70);
             flowLayoutPanel2.TabIndex = 4;
             // 
             // txtSearch
@@ -173,7 +173,7 @@
             viewOrder.Size = new Size(148, 36);
             viewOrder.TabIndex = 8;
             viewOrder.Text = "View all Order";
-            viewOrder.Click += this.viewOrder_Click;
+            viewOrder.Click += viewOrder_Click;
             // 
             // flowLayoutPanel3
             // 
@@ -183,10 +183,10 @@
             flowLayoutPanel3.Controls.Add(materialLabel1);
             flowLayoutPanel3.Controls.Add(btnOrder);
             flowLayoutPanel3.Dock = DockStyle.Right;
-            flowLayoutPanel3.Location = new Point(539, 61);
+            flowLayoutPanel3.Location = new Point(539, 70);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Padding = new Padding(5, 0, 5, 0);
-            flowLayoutPanel3.Size = new Size(355, 502);
+            flowLayoutPanel3.Size = new Size(355, 493);
             flowLayoutPanel3.TabIndex = 5;
             // 
             // label4
@@ -249,9 +249,9 @@
             flowLayoutPanel1.Controls.Add(btnFood);
             flowLayoutPanel1.Controls.Add(btnCoffee);
             flowLayoutPanel1.Dock = DockStyle.Left;
-            flowLayoutPanel1.Location = new Point(0, 61);
+            flowLayoutPanel1.Location = new Point(0, 70);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(210, 502);
+            flowLayoutPanel1.Size = new Size(210, 493);
             flowLayoutPanel1.TabIndex = 7;
             // 
             // btnAll
@@ -319,10 +319,10 @@
             // 
             flowLayoutPanel4.AutoScroll = true;
             flowLayoutPanel4.Dock = DockStyle.Fill;
-            flowLayoutPanel4.Location = new Point(210, 61);
+            flowLayoutPanel4.Location = new Point(210, 70);
             flowLayoutPanel4.Margin = new Padding(5, 3, 5, 3);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(329, 502);
+            flowLayoutPanel4.Size = new Size(329, 493);
             flowLayoutPanel4.TabIndex = 10;
             // 
             // flowLayoutPanel5

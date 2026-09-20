@@ -45,7 +45,7 @@ namespace C__POS_System
             {
                 List<Product> products;
                 if (filter == "All")
-                    products = _productService.GetAllProducts();
+                    products = _productService.GetAllActiveProducts();
                 else
                     products = _productService.SearchProducts(filter);
 
@@ -202,7 +202,7 @@ namespace C__POS_System
             var card = new Panel
             {
                 Size = new Size(330, 65),
-                //BorderStyle = BorderStyle.FixedSingle,
+                BorderStyle = BorderStyle.FixedSingle,
                 BackColor = Color.White,
                 Margin = new Padding(3, 3, 3, 3),
                 Tag = item
@@ -381,6 +381,12 @@ namespace C__POS_System
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewOrder_Click(object sender, EventArgs e)
+        {
+            ShowOrders showOrders = new ShowOrders();
+            showOrders.ShowDialog();
         }
     }
 }

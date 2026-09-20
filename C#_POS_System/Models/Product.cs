@@ -14,5 +14,6 @@ namespace C__POS_System.Models
         public int CategoryID { get; set; }
         public string CategoryName { get; set; } = string.Empty;
         public string Imaage { get; set; } = string.Empty;
+        public bool IsActive { get; set; } = true;
     }
 }
