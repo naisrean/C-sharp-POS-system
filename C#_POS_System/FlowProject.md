@@ -10,7 +10,6 @@ A **Windows Forms (C# / .NET 8)** Point-Of-Sale (POS) application for managing p
 - **Language / Runtime:** C# 12 / .NET 8.0 (`net8.0-windows`).
 
 ---
-
 ## 2. Project Structure
 
 ```
@@ -256,7 +255,77 @@ classDiagram
 
 ---
 
-## 7. Feature Notes
+## 7. OOP in This Project
+
+The application is organized around the **four pillars of Object-Oriented Programming**, mapping framework folders to classic OOP roles:
+
+### 7.1 Encapsulation
+
+- **Entities (Models):** `Product`, `Category`, `Order`, and `OrderItem` use auto-properties with private backing fields, exposing data only through public `get`/`set` accessors. Callers never touch raw fields or the SQL rows behind them.
+- **Services:** `ProductService` and `OrderService` hide SQL strings, `SqlParameter` construction, and `DataTable → List<T>` mapping inside their method bodies. The UI only calls simple methods like `AddProduct(product)` or `DeleteProduct(id)`.
+- **Db helper:** Connection strings and `SqlConnection`/`SqlCommand` lifecycle are encapsulated in `Db`, so the rest of the app never opens a connection directly.
+
+### 7.2 Abstraction
+
+- The Forms layer (UI) depends only on **what** a service can do, not **how** it does it. `MainForm`, `ShowProducts`, and `FormCreate` call `ProductService`/`OrderService` without any knowledge of the underlying SQL.
+- `Db.ExecuteQuery` / `Db.ExecuteNonQuery` abstract the data-access plumbing behind two stable method signatures.
+
+### 7.3 Inheritance
+
+- Every form (`MainForm`, `ShowProducts`, `ShowOrders`, `FormCreate`) inherits from the WinForms base class `Form`, reusing layout, event handling, and windowing behaviour (see the class diagram in §6).
+- Category and Product share the same core (an `Id` + `Name`); both are modelled as their own classes for clarity while remaining related via the FK `Products.CategoryID → Categories.Id`.
+
+### 7.4 Polymorphism
+
+- **Compile-time (overloading):** `Db.ExecuteQuery`/`ExecuteNonQuery` accept calls with or without a `SqlParameter[]`, and the services override behaviour through dedicated methods (`GetAllProducts`, `SearchProducts`, `GetProductsByCategory`) that share a common private `MapProducts` mapper.
+- **Runtime:** All service classes rely on the same base abstractions (`Form`, data helpers), so a `Product` can be treated uniformly by display code regardless of whether it was loaded by name, category, or all.
+
+### 7.5 Association Map (Responsibilities)
+
+| Folder / Class | OOP Role | Responsibilities |
+|----------------|----------|------------------|
+| `DbConnection/Db.cs` | Helper / data-access layer | Connection string, execute query / non-query |
+| `Models/*` | Entities (POCO) | Carry state, no behaviour |
+| `Services/ProductService.cs` | Business-logic service | CRUD + soft-delete + search/filter |
+| `Services/OrderService.cs` | Business-logic service | Create orders + persist line items |
+| `Forms/*` | Presentation layer (inherits `Form`) | UI, events, calling services |
+
+### 7.6 Relationships Between Objects
+
+```mermaid
+classDiagram
+    class Db {
+        +ExecuteQuery(query, params)
+        +ExecuteNonQuery(query, params)
+    }
+    class ProductService {
+        +AddProduct(Product)
+        +UpdateProduct(Product)
+        +DeleteProduct(int)
+        +RestoreProduct(int)
+        +GetAllProducts()
+        +SearchProducts(string)
+    }
+    class OrderService {
+        +AddOrder(Order)
+        +GetAllOrders()
+    }
+    class Product
+    class Category
+    class Order
+    class OrderItem
+
+    Product --> Category
+    Order "1" *-- "many" OrderItem
+    ProductService ..> Db : uses
+    OrderService ..> Db : uses
+    ProductService ..> Product : creates / reads
+    OrderService ..> Order : creates / reads
+```
+
+---
+
+## 8. Feature Notes
 
 1. **Soft delete (IsActive):** Deleting a product sets `IsActive = 0` instead of removing the row, so `OrderItems` history is preserved and no foreign-key errors occur. Inactive products are hidden from the selling screen and shown greyed-out in the management screen with a **Restore** option.
 2. **Search / filter:**

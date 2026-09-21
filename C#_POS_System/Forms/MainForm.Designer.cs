@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label3 = new Label();
             label1 = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
@@ -101,14 +101,14 @@
             flowLayoutPanel2.Location = new Point(0, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(18, 0, 10, 0);
-            flowLayoutPanel2.Size = new Size(894, 70);
+            flowLayoutPanel2.Size = new Size(894, 61);
             flowLayoutPanel2.TabIndex = 4;
             // 
             // txtSearch
             // 
             txtSearch.BorderColor = Color.White;
             txtSearch.BorderRadius = 8;
-            txtSearch.CustomizableEdges = customizableEdges15;
+            txtSearch.CustomizableEdges = customizableEdges29;
             txtSearch.DefaultText = "";
             txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -124,7 +124,7 @@
             txtSearch.PlaceholderForeColor = Color.Gray;
             txtSearch.PlaceholderText = "Search Items";
             txtSearch.SelectedText = "";
-            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges30;
             txtSearch.Size = new Size(290, 36);
             txtSearch.TabIndex = 4;
             txtSearch.TextChanged += txtSearch_TextChanged_1;
@@ -133,7 +133,7 @@
             // 
             btnProduct.BorderColor = Color.White;
             btnProduct.BorderRadius = 8;
-            btnProduct.CustomizableEdges = customizableEdges17;
+            btnProduct.CustomizableEdges = customizableEdges31;
             btnProduct.DisabledState.BorderColor = Color.DarkGray;
             btnProduct.DisabledState.CustomBorderColor = Color.DarkGray;
             btnProduct.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -146,7 +146,7 @@
             btnProduct.Location = new Point(572, 12);
             btnProduct.Margin = new Padding(12, 12, 3, 3);
             btnProduct.Name = "btnProduct";
-            btnProduct.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnProduct.ShadowDecoration.CustomizableEdges = customizableEdges32;
             btnProduct.Size = new Size(106, 36);
             btnProduct.TabIndex = 5;
             btnProduct.Text = " Products";
@@ -156,7 +156,7 @@
             // 
             viewOrder.BorderColor = Color.White;
             viewOrder.BorderRadius = 8;
-            viewOrder.CustomizableEdges = customizableEdges19;
+            viewOrder.CustomizableEdges = customizableEdges33;
             viewOrder.DisabledState.BorderColor = Color.DarkGray;
             viewOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             viewOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -169,7 +169,7 @@
             viewOrder.Location = new Point(693, 12);
             viewOrder.Margin = new Padding(12, 12, 3, 3);
             viewOrder.Name = "viewOrder";
-            viewOrder.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            viewOrder.ShadowDecoration.CustomizableEdges = customizableEdges34;
             viewOrder.Size = new Size(148, 36);
             viewOrder.TabIndex = 8;
             viewOrder.Text = "View all Order";
@@ -183,10 +183,10 @@
             flowLayoutPanel3.Controls.Add(materialLabel1);
             flowLayoutPanel3.Controls.Add(btnOrder);
             flowLayoutPanel3.Dock = DockStyle.Right;
-            flowLayoutPanel3.Location = new Point(539, 70);
+            flowLayoutPanel3.Location = new Point(539, 61);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Padding = new Padding(5, 0, 5, 0);
-            flowLayoutPanel3.Size = new Size(355, 493);
+            flowLayoutPanel3.Size = new Size(355, 502);
             flowLayoutPanel3.TabIndex = 5;
             // 
             // label4
@@ -226,7 +226,7 @@
             // btnOrder
             // 
             btnOrder.BorderRadius = 10;
-            btnOrder.CustomizableEdges = customizableEdges21;
+            btnOrder.CustomizableEdges = customizableEdges35;
             btnOrder.DisabledState.BorderColor = Color.DarkGray;
             btnOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -236,7 +236,7 @@
             btnOrder.ForeColor = Color.White;
             btnOrder.Location = new Point(8, 409);
             btnOrder.Name = "btnOrder";
-            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges36;
             btnOrder.Size = new Size(328, 52);
             btnOrder.TabIndex = 2;
             btnOrder.Text = "Order";
@@ -249,15 +249,15 @@
             flowLayoutPanel1.Controls.Add(btnFood);
             flowLayoutPanel1.Controls.Add(btnCoffee);
             flowLayoutPanel1.Dock = DockStyle.Left;
-            flowLayoutPanel1.Location = new Point(0, 70);
+            flowLayoutPanel1.Location = new Point(0, 61);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(210, 493);
+            flowLayoutPanel1.Size = new Size(210, 502);
             flowLayoutPanel1.TabIndex = 7;
             // 
             // btnAll
             // 
             btnAll.BackColor = Color.Black;
-            btnAll.CustomizableEdges = customizableEdges23;
+            btnAll.CustomizableEdges = customizableEdges37;
             btnAll.DisabledState.BorderColor = Color.DarkGray;
             btnAll.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -268,7 +268,7 @@
             btnAll.Location = new Point(3, 71);
             btnAll.Margin = new Padding(3, 10, 3, 3);
             btnAll.Name = "btnAll";
-            btnAll.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnAll.ShadowDecoration.CustomizableEdges = customizableEdges38;
             btnAll.Size = new Size(168, 46);
             btnAll.TabIndex = 8;
             btnAll.Text = "All";
@@ -278,7 +278,7 @@
             // btnFood
             // 
             btnFood.BackColor = Color.Black;
-            btnFood.CustomizableEdges = customizableEdges25;
+            btnFood.CustomizableEdges = customizableEdges39;
             btnFood.DisabledState.BorderColor = Color.DarkGray;
             btnFood.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFood.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -289,7 +289,7 @@
             btnFood.Location = new Point(3, 130);
             btnFood.Margin = new Padding(3, 10, 3, 3);
             btnFood.Name = "btnFood";
-            btnFood.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnFood.ShadowDecoration.CustomizableEdges = customizableEdges40;
             btnFood.Size = new Size(168, 46);
             btnFood.TabIndex = 6;
             btnFood.Text = "Food";
@@ -298,7 +298,7 @@
             // btnCoffee
             // 
             btnCoffee.BackColor = Color.Black;
-            btnCoffee.CustomizableEdges = customizableEdges27;
+            btnCoffee.CustomizableEdges = customizableEdges41;
             btnCoffee.DisabledState.BorderColor = Color.DarkGray;
             btnCoffee.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCoffee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -309,7 +309,7 @@
             btnCoffee.Location = new Point(3, 189);
             btnCoffee.Margin = new Padding(3, 10, 3, 3);
             btnCoffee.Name = "btnCoffee";
-            btnCoffee.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnCoffee.ShadowDecoration.CustomizableEdges = customizableEdges42;
             btnCoffee.Size = new Size(168, 46);
             btnCoffee.TabIndex = 7;
             btnCoffee.Text = "Coffee";
@@ -319,10 +319,10 @@
             // 
             flowLayoutPanel4.AutoScroll = true;
             flowLayoutPanel4.Dock = DockStyle.Fill;
-            flowLayoutPanel4.Location = new Point(210, 70);
+            flowLayoutPanel4.Location = new Point(210, 61);
             flowLayoutPanel4.Margin = new Padding(5, 3, 5, 3);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(329, 493);
+            flowLayoutPanel4.Size = new Size(329, 502);
             flowLayoutPanel4.TabIndex = 10;
             // 
             // flowLayoutPanel5
